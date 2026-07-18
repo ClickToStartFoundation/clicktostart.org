@@ -31,13 +31,13 @@ export const teamSections: TeamSection[] = [
       { name: "Ann Smith" },
       { name: "Samantha Young" },
       { name: "Dylan Deyal" },
-      { name: "Sarah Sellier" },
     ],
   },
   {
     title: "Specialist Volunteers",
     members: [
       { name: "Joshu Morris" },
+      { name: "Sarah Sellier" },
       { name: "Rebecca Robinson" },
       { name: "Naresh Seegobin" },
     ],
