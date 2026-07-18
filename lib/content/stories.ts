@@ -49,6 +49,19 @@ export const stories: Story[] = [
       "Several signed up for Programming for Teens on the spot. That pipeline, from one inspiring day to a full course to whatever comes after, is exactly why this event exists.",
     ],
   },
+  {
+    slug: "gift-of-tech-2023",
+    tag: "outreach",
+    date: "dec 2023",
+    title: "Giving A Gift Of Tech!",
+    excerpt:
+      "A Youth Tech Talk and Christmas gift-giving day at UWI St Augustine — robots, Raspberry Pi, and a tech Santa for 25+ children.",
+    paras: [
+      "On December 9, 2023, The UWI St Augustine campus hosted more than twenty-five children from underserved communities for a day that was half tech talk, half Christmas party. Director Abigail Wren opened with the point of it all: technology is how opportunities get created for our youth.",
+      "ICT experts Ria Jack and Richard Ince shared what working in technology actually looks like, and the demos stole the show — robotics and Raspberry Pi builds from scholarship winner Sarah Sellier and computer scientist Nicholas Mendez. For most of the room it was their first time seeing a robot up close, let alone one they were allowed to touch.",
+      "Then came a “tech” Santa with gifts sponsored by Republic Bank Ltd, and a Christmas lunch set to pannist music. Since 2013 the foundation has worked to bridge the technology skills gap for marginalised groups in Trinidad — some days that looks like a classroom, and some days it looks like Christmas.",
+    ],
+  },
 ];
 
 export const storySlugs = stories.map((s) => s.slug);
