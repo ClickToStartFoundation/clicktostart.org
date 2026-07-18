@@ -9,6 +9,7 @@ const staticRoutes = [
   "/impact",
   "/team",
   "/stories",
+  "/gallery",
   "/about",
   "/contact",
   "/donate",
