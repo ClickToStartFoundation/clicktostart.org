@@ -29,7 +29,7 @@ export type Story = {
   paras: string[];
 };
 
-export type TeamMember = { name: string; role: string };
+export type TeamMember = { name: string; role?: string };
 
 export type Stat = { key: string; value: number; label: string };
 export type Milestone = { year: string; title: string; note: string };

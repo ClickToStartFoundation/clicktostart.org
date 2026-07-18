@@ -38,3 +38,4 @@ yarn-error.log*
 # design handoff (reference only, not part of the app)
 /_handoff
 *branding-handoff.zip
+.vercel
