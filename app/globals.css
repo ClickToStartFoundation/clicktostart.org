@@ -157,13 +157,14 @@
     -webkit-text-size-adjust: 100%;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
   }
 
   body {
     background-color: var(--bg);
     color: var(--ink);
     font-family: var(--font-bricolage), "Bricolage Grotesque", sans-serif;
+    /* Bricolage's 400 reads thin — the variable font makes any weight free. */
+    font-weight: 470;
     min-height: 100vh;
   }
 
