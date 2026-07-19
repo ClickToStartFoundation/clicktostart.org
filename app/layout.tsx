@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   },
   description: site.description,
   applicationName: site.name,
+  alternates: { canonical: "./" },
   keywords: [
     "ClickToStart Foundation",
     "digital literacy",
@@ -36,6 +37,7 @@ export const metadata: Metadata = {
     description: site.description,
     url: site.url,
     locale: "en_TT",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: site.name }],
   },
   twitter: {
     card: "summary_large_image",
@@ -44,11 +46,10 @@ export const metadata: Metadata = {
   },
 };
 
+// Matches the default (light) theme; the theme script and toggle keep it in
+// sync with data-theme, which the media-query variant can't track.
 export const viewport: Viewport = {
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
-    { media: "(prefers-color-scheme: dark)", color: "#0b1f3f" },
-  ],
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
