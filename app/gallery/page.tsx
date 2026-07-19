@@ -1,8 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
+import sharp from "sharp";
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
+import { GalleryImage } from "@/components/gallery/GalleryImage";
 
 export const metadata: Metadata = {
   title: "Gallery",
@@ -10,11 +12,21 @@ export const metadata: Metadata = {
     "Moments from our classes, camps, drives, and events across Trinidad & Tobago.",
 };
 
-export default function GalleryPage() {
+export default async function GalleryPage() {
+  const dir = path.join(process.cwd(), "public/gallery");
   const files = fs
-    .readdirSync(path.join(process.cwd(), "public/gallery"))
+    .readdirSync(dir)
     .filter((f) => /\.(jpe?g|png|webp)$/i.test(f))
     .sort();
+
+  // Dimensions read at build time so every image reserves its box up front —
+  // the masonry never reflows while photos stream in.
+  const images = await Promise.all(
+    files.map(async (f) => {
+      const meta = await sharp(path.join(dir, f)).metadata();
+      return { src: `/gallery/${f}`, width: meta.width ?? 4, height: meta.height ?? 3 };
+    }),
+  );
 
   return (
     <Container className="w-full pb-20">
@@ -26,15 +38,12 @@ export default function GalleryPage() {
         />
       </div>
 
-      {/* ponytail: plain lazy <img> masonry; swap for next/image if bandwidth matters */}
       <div className="mt-10 animate-rise columns-2 gap-5 delay-1 md:columns-3">
-        {files.map((f) => (
-          <img
-            key={f}
-            src={`/gallery/${f}`}
+        {images.map((img) => (
+          <GalleryImage
+            key={img.src}
+            {...img}
             alt="ClickToStart Foundation event photo"
-            loading="lazy"
-            className="mb-5 w-full rounded-2xl border border-line"
           />
         ))}
       </div>
