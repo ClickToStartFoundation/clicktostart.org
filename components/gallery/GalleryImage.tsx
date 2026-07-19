@@ -30,6 +30,7 @@ export function GalleryImage({
       height={height}
       alt={alt}
       loading="lazy"
+      decoding="async"
       onLoad={() => setLoaded(true)}
       className={cn(
         "mb-5 h-auto w-full rounded-2xl border border-line transition-[opacity,transform] duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)]",

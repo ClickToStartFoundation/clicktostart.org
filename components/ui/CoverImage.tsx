@@ -8,10 +8,13 @@ export function CoverImage({
   src,
   alt,
   className,
+  priority = false,
 }: {
   src: string;
   alt: string;
   className?: string;
+  /** Set for above-the-fold images (hero): loads eagerly at high priority. */
+  priority?: boolean;
 }) {
   const ref = useRef<HTMLImageElement>(null);
   const [loaded, setLoaded] = useState(false);
@@ -32,6 +35,9 @@ export function CoverImage({
         ref={ref}
         src={src}
         alt={alt}
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "auto"}
+        decoding="async"
         onLoad={() => setLoaded(true)}
         className={cn(
           "h-full w-full object-cover transition-opacity duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)]",
