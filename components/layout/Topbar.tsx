@@ -11,11 +11,11 @@ import { FacebookIcon, InstagramIcon } from "@/components/ui/icons";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 const iconButton =
-  "flex h-10 w-10 items-center justify-center rounded-full bg-subtle text-ink transition duration-150 ease-spring hover:scale-110 hover:bg-accent hover:text-accent-ink";
+  "flex h-9 w-9 flex-none items-center justify-center rounded-full bg-subtle text-ink transition duration-150 ease-spring hover:scale-110 hover:bg-accent hover:text-accent-ink sm:h-10 sm:w-10";
 
 function Wordmark() {
   return (
-    <span className="text-[19px] font-bold tracking-[0.01em]">
+    <span className="truncate text-[17px] font-bold tracking-[0.01em] sm:text-[19px]">
       <span className="text-accent">{site.wordmark.lead}</span>
       {site.wordmark.rest}
     </span>
@@ -48,9 +48,13 @@ export function Topbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-canvas/85 font-nav backdrop-blur-md">
-      <div className="flex items-center justify-between gap-4 px-6 py-4 sm:px-12 sm:py-5">
-        <Link href="/" className="flex items-center gap-2.5" aria-label={`${site.name} — home`}>
-          <Logo width={26} title={`${site.name} logo`} />
+      <div className="flex items-center justify-between gap-3 px-4 py-3.5 sm:gap-4 sm:px-12 sm:py-5">
+        <Link
+          href="/"
+          className="flex min-w-0 items-center gap-2.5"
+          aria-label={`${site.name} — home`}
+        >
+          <Logo width={26} className="flex-none" title={`${site.name} logo`} />
           <Wordmark />
         </Link>
 
@@ -65,7 +69,7 @@ export function Topbar() {
           ))}
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex flex-none items-center gap-1.5 sm:gap-3">
           <a
             href={site.social.facebook}
             target="_blank"
@@ -87,7 +91,7 @@ export function Topbar() {
           <ThemeToggle className={iconButton} />
           <Link
             href="/donate"
-            className="rounded-full bg-tile px-5 py-2.5 text-[15px] font-semibold text-tile-ink transition duration-150 ease-spring hover:scale-105 hover:bg-accent sm:px-6 sm:py-[11px]"
+            className="rounded-full bg-tile px-4 py-2 text-[14px] font-semibold whitespace-nowrap text-tile-ink transition duration-150 ease-spring hover:scale-105 hover:bg-accent sm:px-6 sm:py-[11px] sm:text-[15px]"
           >
             Donate
           </Link>
