@@ -164,7 +164,7 @@
     color: var(--ink);
     font-family: var(--font-bricolage), "Bricolage Grotesque", sans-serif;
     /* Bricolage's 400 reads thin — the variable font makes any weight free. */
-    font-weight: 470;
+    font-weight: 500;
     min-height: 100vh;
   }
 
