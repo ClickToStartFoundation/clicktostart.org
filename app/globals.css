@@ -24,7 +24,7 @@
   --acci: #ffffff;
   --tile: #14356b;
   --tilei: #ffffff;
-  --mut: #8fb6df;
+  --mut: #4577a6; /* 4.7:1 on white — fine print stays readable */
   --ftr: #14356b;
   --shd: rgba(20, 53, 107, 0.09);
   --logo-fill: #14356b;
@@ -32,12 +32,13 @@
   --btnbrd: #7fa9d6;
   --dot: #dce9f7;
 
+  --error: #c74e3d;
+
   /* Constant across themes — these sit on the always-dark navy tile. */
   --on-tile: #ffffff;
   --on-tile-mono: #9cc4ea;
   --on-tile-sub: #c6d8ee;
   --live: #5bd98a;
-  --error: #c74e3d;
 
   color-scheme: light;
 }
@@ -60,6 +61,7 @@
   --logo-dot: #0b1f3f;
   --btnbrd: rgba(78, 150, 217, 0.55);
   --dot: rgba(78, 150, 217, 0.16);
+  --error: #e57363; /* 5:1 on dark surfaces; the light red drops to 3.3:1 */
 
   color-scheme: dark;
 }

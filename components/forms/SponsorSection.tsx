@@ -88,7 +88,7 @@ export function SponsorSection() {
                   className={cn(
                     "mt-5 rounded-xl py-3.5 text-center text-[14.5px] font-bold",
                     selected
-                      ? "bg-accent text-white"
+                      ? "bg-accent text-accent-ink"
                       : dark
                         ? "bg-white/12 text-white"
                         : "bg-subtle text-ink",

@@ -11,7 +11,7 @@ import { FacebookIcon, InstagramIcon } from "@/components/ui/icons";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 
 const iconButton =
-  "flex h-10 w-10 items-center justify-center rounded-full bg-subtle text-ink transition duration-150 ease-spring hover:scale-110 hover:bg-accent hover:text-white";
+  "flex h-10 w-10 items-center justify-center rounded-full bg-subtle text-ink transition duration-150 ease-spring hover:scale-110 hover:bg-accent hover:text-accent-ink";
 
 function Wordmark() {
   return (

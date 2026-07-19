@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useCallback, useContext, useEffect, useState } from "react";
-import { THEME_STORAGE_KEY } from "./theme-script";
+import { syncThemeColorMeta, THEME_STORAGE_KEY } from "./theme-script";
 
 type Theme = "light" | "dark";
 
@@ -26,6 +26,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTheme((prev) => {
       const next: Theme = prev === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", next);
+      syncThemeColorMeta(next);
       try {
         localStorage.setItem(THEME_STORAGE_KEY, next);
       } catch {

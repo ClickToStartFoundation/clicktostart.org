@@ -46,7 +46,7 @@ export function FeaturedCamp({ variant = "home" }: { variant?: "home" | "compact
         </div>
       </div>
 
-      <span className="relative rounded-xl bg-accent px-6 py-3.5 text-[15px] font-bold whitespace-nowrap text-white transition duration-150 ease-spring group-hover:scale-105 sm:px-7">
+      <span className="relative rounded-xl bg-accent px-6 py-3.5 text-[15px] font-bold whitespace-nowrap text-accent-ink transition duration-150 ease-spring group-hover:scale-105 sm:px-7">
         Explore the camps →
       </span>
     </Link>
