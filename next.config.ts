@@ -6,17 +6,9 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ["zod"],
   },
-  async redirects() {
-    return [
-      // Canonical host: the apex (matches the old site's backlinks).
-      {
-        source: "/:path*",
-        has: [{ type: "host", value: "www.clicktostart.org" }],
-        destination: "https://clicktostart.org/:path*",
-        permanent: true,
-      },
-    ];
-  },
+  // No host redirect for now: the apex A record lives in Bluehost's zone and
+  // was reverted to their old server. Once apex reliably points at Vercel,
+  // redirect it to www here.
 };
 
 export default nextConfig;

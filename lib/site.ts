@@ -6,7 +6,7 @@ export const site = {
   tagline: "empowering through technology",
   description:
     "ClickToStart Foundation is a volunteer-run nonprofit teaching Trinidad & Tobago to master the digital world — free training, donated computers, and a community that shows up.",
-  url: "https://clicktostart.org",
+  url: "https://www.clicktostart.org",
   email: "clicktostartfoundation@gmail.com",
   location: "Trinidad & Tobago",
   foundedYear: 2016,
