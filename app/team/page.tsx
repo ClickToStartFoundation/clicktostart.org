@@ -22,7 +22,7 @@ function initialsOf(name: string) {
 function Avatar({ name }: { name: string }) {
   return (
     <div className="flex aspect-[4/3] items-center justify-center bg-tile">
-      <span className="text-[40px] font-extrabold tracking-wide text-on-tile">
+      <span className="text-[30px] font-extrabold tracking-wide text-on-tile sm:text-[40px]">
         {initialsOf(name)}
       </span>
     </div>
@@ -43,12 +43,12 @@ export default function TeamPage() {
       {teamSections.map((section) => (
         <section key={section.title} className="mt-12 animate-rise delay-1">
           <h2 className="mb-[22px] text-[28px] font-extrabold">{section.title}</h2>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3">
             {section.members.map((member) => (
               <Card key={member.name} hover="lift" className="overflow-hidden">
                 <Avatar name={member.name} />
-                <div className="px-[22px] pt-5 pb-6">
-                  <div className="text-[18px] font-bold">{member.name}</div>
+                <div className="px-4 pt-4 pb-5 sm:px-[22px] sm:pt-5 sm:pb-6">
+                  <div className="text-[15.5px] font-bold sm:text-[18px]">{member.name}</div>
                   {member.role && (
                     <div className="mt-[5px] font-mono text-[12.5px] text-accent">
                       {member.role}
