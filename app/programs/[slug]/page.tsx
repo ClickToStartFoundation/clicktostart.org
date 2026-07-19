@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Card } from "@/components/ui/Card";
-import { Photo } from "@/components/ui/Photo";
 import { getProgram, programSlugs } from "@/lib/content/programs";
 
 export function generateStaticParams() {
@@ -96,7 +95,11 @@ export default async function ProgramDetailPage({
         </div>
 
         <div className="flex flex-col gap-5">
-          <Photo label={`photo: ${program.slug}`} className="aspect-[4/3] rounded-panel" />
+          <img
+            src={program.image}
+            alt={program.name}
+            className="aspect-[4/3] w-full rounded-panel object-cover"
+          />
           <figure className="rounded-panel bg-tile p-[30px] text-white">
             <blockquote className="text-pretty text-[19px] font-semibold leading-[1.55]">
               &ldquo;{program.quote}&rdquo;

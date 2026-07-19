@@ -3,6 +3,7 @@ import type { Program } from "./types";
 export const programs: Program[] = [
   {
     slug: "programming-for-teens",
+    image: "/images/programs/programming-for-teens.jpg",
     tag: "01 / teens",
     name: "Programming for Teens",
     blurb: "First lines of code to first real projects.",
@@ -28,6 +29,7 @@ export const programs: Program[] = [
   },
   {
     slug: "adult-tech-literacy",
+    image: "/images/programs/adult-tech-literacy.jpg",
     tag: "02 / adults",
     name: "Adult Technology Literacy",
     blurb: "From first click to confident everyday use.",
@@ -53,6 +55,7 @@ export const programs: Program[] = [
   },
   {
     slug: "computers-for-kids",
+    image: "/images/programs/computers-for-kids.jpg",
     tag: "03 / kids",
     name: "Computers for Kids",
     blurb: "Donated machines that keep school within reach.",
@@ -78,6 +81,7 @@ export const programs: Program[] = [
   },
   {
     slug: "youth-speak-up",
+    image: "/images/programs/youth-speak-up.png",
     tag: "04 / youth",
     name: "Youth Speak UP!",
     blurb: "A platform for young voices in tech and community.",
@@ -103,6 +107,7 @@ export const programs: Program[] = [
   },
   {
     slug: "hamper-drive",
+    image: "/images/programs/hamper-drive.jpg",
     tag: "05 / community",
     name: "Hamper Donation Drive",
     blurb: "110+ goodwill hampers delivered to local communities.",
@@ -128,6 +133,7 @@ export const programs: Program[] = [
   },
   {
     slug: "girls-in-ict",
+    image: "/images/programs/girls-in-ict.jpg",
     tag: "06 / girls in ict",
     name: "Girls in ICT Day",
     blurb: "Encouraging the next generation of women in technology.",

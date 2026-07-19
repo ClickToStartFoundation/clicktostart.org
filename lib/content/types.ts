@@ -7,6 +7,8 @@ export type Program = {
   slug: string;
   tag: string;
   name: string;
+  /** Cover image path under public/. */
+  image: string;
   blurb: string;
   desc: string;
   who: string;
