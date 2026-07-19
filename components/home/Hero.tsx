@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { CoverImage } from "@/components/ui/CoverImage";
 import { Button } from "@/components/ui/Button";
 import { Logo } from "@/components/ui/Logo";
 import { TerminalLine } from "@/components/ui/TerminalLine";
@@ -31,10 +32,10 @@ export function Hero() {
           <div className="absolute right-[18px] top-[18px] z-10 hidden animate-float drop-shadow-[0_10px_18px_rgba(20,53,107,0.2)] sm:block">
             <Logo width={76} bodyFill="var(--acc)" dotFill="#ffffff" cap="var(--ink)" />
           </div>
-          <img
+          <CoverImage
             src="/images/workshop.jpg"
             alt="Students and volunteers setting up donated computers at a community workshop"
-            className="aspect-[4/3] w-full rounded-panel object-cover"
+            className="aspect-[4/3] w-full rounded-panel"
           />
           <div className="absolute bottom-[-18px] left-[-18px] hidden items-center gap-3 rounded-soft border border-line bg-surface px-5 py-3.5 shadow-badge sm:flex">
             <Logo width={16} bodyFill="#4e96d9" dotFill="#ffffff" cap={null} />
