@@ -107,12 +107,20 @@ export function Topbar() {
         </div>
       </div>
 
-      {menuOpen ? (
-        <nav
-          aria-label="Primary"
-          className="border-t border-line px-6 py-3 text-[16px] font-medium lg:hidden"
-        >
-          <ul className="flex flex-col">
+      {/* Collapsible menu: grid-rows animates the height open and closed. */}
+      <div
+        className={cn(
+          "grid transition-[grid-template-rows] duration-300 ease-out-soft lg:hidden",
+          menuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+        )}
+      >
+        <nav aria-label="Primary" aria-hidden={!menuOpen} inert={!menuOpen} className="overflow-hidden">
+          <ul
+            className={cn(
+              "flex flex-col border-t border-line px-4 py-3 text-[16px] font-medium transition-[opacity,transform] duration-300 ease-out-soft sm:px-6",
+              menuOpen ? "translate-y-0 opacity-100" : "-translate-y-2 opacity-0",
+            )}
+          >
             {navItems.map((item) => {
               const active = isActive(item, pathname);
               return (
@@ -120,6 +128,7 @@ export function Topbar() {
                   <Link
                     href={item.href}
                     aria-current={active ? "page" : undefined}
+                    tabIndex={menuOpen ? undefined : -1}
                     className={cn(
                       "block rounded-xl px-3 py-3 transition-colors",
                       active ? "bg-subtle font-bold text-ink" : "text-sub hover:text-accent",
@@ -132,7 +141,7 @@ export function Topbar() {
             })}
           </ul>
         </nav>
-      ) : null}
+      </div>
     </header>
   );
 }
